@@ -645,10 +645,11 @@
             /* هیرو */
 
             .hero {
-                min-height: 500px;
-                background-position: center;
-            }
-
+    min-height: 500px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
             .hero-content {
                 text-align: center;
                 padding: 60px 0;
@@ -798,7 +799,16 @@
             }
 
         }
+        .contact-box a {
+    color: #d7e2ed;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
+.contact-box a:hover {
+    color: white;
+    text-decoration: underline;
+}
     </style>
 </head>
 
@@ -1201,7 +1211,24 @@
                     </div>
 
                 </div>
+                <div class="teacher">
 
+                    <img src="images/teacher7.jpg"
+                         alt="معلم مدرسه">
+                
+                    <div class="teacher-info">
+                
+                        <h3>
+                            آموزگاران دبستان
+                        </h3>
+                
+                        <p>
+                            معلم دبستان سبحان
+                        </p>
+                
+                    </div>
+                
+                </div>
 
             </div>
 
@@ -1254,7 +1281,7 @@
                         </h3>
 
                         <p>
-                            اطلاعیه مربوط به آغاز سال تحصیلی و جشن شکوفه‌ها
+                            برگزاری جشن شکوفه ها در اول مهرماه
                         </p>
 
                     </div>
@@ -1274,7 +1301,7 @@
                         </div>
 
                         <h3>
-                            برگزاری کلاس‌های آموزشی
+                            برگزاری کلاس‌های آموزشی و تقویتی تابستانه
                         </h3>
 
                         <p>
@@ -1436,7 +1463,9 @@
                             </h4>
 
                             <p>
-                                07153355595 - 09173325142
+                                <a href="tel:07153355595">07153355595</a>
+                                -
+                                <a href="tel:09173325142">09173325142</a>
                             </p>
 
                         </div>
@@ -1457,7 +1486,10 @@
                             </h4>
 
                             <p>
-                                sobhanschool_fasa
+                                <a href="https://www.instagram.com/sobhanschool_fasa/"
+                                   target="_blank">
+                                    @sobhanschool_fasa
+                                </a>
                             </p>
 
                         </div>
@@ -1491,31 +1523,39 @@
 
                 <div class="contact-form">
 
-                    <form>
+                    <form id="contactForm">
 
                         <input
                             type="text"
-                            placeholder="نام و نام خانوادگی">
-
+                            id="name"
+                            placeholder="نام و نام خانوادگی"
+                            required>
+                    
                         <input
                             type="email"
-                            placeholder="ایمیل">
-
+                            id="email"
+                            placeholder="ایمیل"
+                            required>
+                    
                         <input
-                            type="text"
-                            placeholder="شماره تماس">
-
+                            type="tel"
+                            id="phone"
+                            placeholder="شماره تماس"
+                            required>
+                    
                         <textarea
-                            placeholder="پیام خود را بنویسید..."></textarea>
-
+                            id="message"
+                            placeholder="پیام خود را بنویسید..."
+                            required></textarea>
+                    
                         <button
                             type="submit"
                             class="submit-btn">
-
-                            ارسال پیام
-
+                    
+                            ارسال پیام در واتساپ
+                    
                         </button>
-
+                    
                     </form>
 
                 </div>
@@ -1541,14 +1581,39 @@
             </p>
 
             <p>
-                طراحی و توسعه وب‌سایت آموزشی دبستان سبحان
+                 طراحی و توسعه وب‌سایت آموزشی دبستان سبحان توسط محمدرضا رحمانی
             </p>
 
         </div>
 
     </footer>
 
+    <script>
 
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        
+            event.preventDefault();
+        
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+        
+            const whatsappMessage =
+                "سلام، از طریق وب‌سایت دبستان سبحان پیام دارم.%0A%0A" +
+                "نام: " + name + "%0A" +
+                "ایمیل: " + email + "%0A" +
+                "شماره تماس: " + phone + "%0A" +
+                "پیام: " + message;
+        
+            const whatsappURL =
+                "https://wa.me/989173325142?text=" + whatsappMessage;
+        
+            window.open(whatsappURL, "_blank");
+        
+        });
+        
+        </script>
 </body>
 
 </html>
