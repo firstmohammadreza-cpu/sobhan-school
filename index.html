@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -27,11 +28,18 @@
             scroll-behavior: smooth;
         }
 
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: "Vazirmatn", sans-serif;
             background-color: #f5f7fb;
             color: #222;
             line-height: 1.8;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         a {
@@ -50,6 +58,7 @@
             margin: auto;
         }
 
+
         /* =========================
            هدر
         ========================= */
@@ -63,50 +72,43 @@
         }
 
         .navbar {
-            height: 80px;
+            min-height: 80px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 21px;
+            gap: 10px;
+            font-size: 19px;
             font-weight: 800;
             color: #164e8a;
+            white-space: nowrap;
         }
 
         .logo img {
-            width: 52px;
-            height: 52px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
-        }
-
-        .logo-circle {
-            width: 52px;
-            height: 52px;
-            background: #164e8a;
-            color: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 22px;
+            align-items: center;
         }
 
         nav a {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             color: #333;
             transition: 0.3s;
+            white-space: nowrap;
         }
 
         nav a:hover {
@@ -120,6 +122,7 @@
             border-radius: 10px;
             font-size: 14px;
             transition: 0.3s;
+            white-space: nowrap;
         }
 
         .header-button:hover {
@@ -127,20 +130,26 @@
             transform: translateY(-2px);
         }
 
+
         /* =========================
-           بخش اصلی
+           صفحه اصلی
         ========================= */
 
         .hero {
             min-height: 600px;
             display: flex;
             align-items: center;
+
             background:
-                linear-gradient(rgba(10, 48, 85, 0.72), rgba(10, 48, 85, 0.72)),
+                linear-gradient(
+                    rgba(10, 48, 85, 0.72),
+                    rgba(10, 48, 85, 0.72)
+                ),
                 url("images/school.jpg");
 
             background-size: cover;
             background-position: center;
+
             color: white;
         }
 
@@ -204,6 +213,7 @@
             color: #164e8a;
         }
 
+
         /* =========================
            عنوان بخش ها
         ========================= */
@@ -234,6 +244,7 @@
             max-width: 650px;
             margin: auto;
         }
+
 
         /* =========================
            معرفی مدرسه
@@ -281,6 +292,7 @@
             margin-left: 10px;
         }
 
+
         /* =========================
            کارت امکانات
         ========================= */
@@ -327,6 +339,7 @@
             font-size: 14px;
         }
 
+
         /* =========================
            کادر آموزشی
         ========================= */
@@ -364,6 +377,7 @@
             color: #888;
             font-size: 14px;
         }
+
 
         /* =========================
            اخبار
@@ -409,6 +423,7 @@
             font-size: 14px;
         }
 
+
         /* =========================
            گالری
         ========================= */
@@ -430,6 +445,7 @@
         .gallery img:hover {
             transform: scale(1.03);
         }
+
 
         /* =========================
            تماس
@@ -471,6 +487,7 @@
 
         .contact-icon {
             font-size: 25px;
+            flex-shrink: 0;
         }
 
         .contact-box h4 {
@@ -520,6 +537,7 @@
             font-weight: 600;
         }
 
+
         /* =========================
            فوتر
         ========================= */
@@ -536,18 +554,27 @@
             font-size: 14px;
         }
 
+
         /* =========================
-           واکنش گرا
+           تبلت
         ========================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
 
-            nav ul {
-                gap: 12px;
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 15px 0;
             }
 
             .header-button {
                 display: none;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .about,
@@ -562,64 +589,225 @@
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 40px;
             }
         }
 
+
+        /* =========================
+           موبایل
+        ========================= */
+
         @media (max-width: 600px) {
 
-            .navbar {
-                height: auto;
-                padding: 15px 0;
-                flex-direction: column;
-                gap: 15px;
+            .container {
+                width: 90%;
             }
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+
+            /* هدر */
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                padding: 12px 0;
                 gap: 12px;
             }
 
+            .logo {
+                justify-content: center;
+                width: 100%;
+                font-size: 16px;
+            }
+
+            .logo img {
+                width: 42px;
+                height: 42px;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav ul {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 7px 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+
+            /* هیرو */
+
             .hero {
-                min-height: 520px;
+                min-height: 500px;
+                background-position: center;
             }
 
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .section {
+            .hero-content {
+                text-align: center;
                 padding: 60px 0;
             }
 
-            .section-title h2 {
-                font-size: 26px;
+            .hero-content span {
+                font-size: 11px;
+                padding: 6px 10px;
             }
+
+            .hero h1 {
+                font-size: 27px;
+                line-height: 1.7;
+            }
+
+            .hero p {
+                font-size: 14px;
+                line-height: 2;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+
+            /* بخش ها */
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .section-title {
+                margin-bottom: 30px;
+            }
+
+            .section-title span {
+                font-size: 12px;
+            }
+
+            .section-title h2 {
+                font-size: 23px;
+                line-height: 1.7;
+            }
+
+            .section-title p {
+                font-size: 13px;
+                line-height: 2;
+            }
+
+
+            /* درباره */
+
+            .about {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .about-image img {
+                height: 260px;
+            }
+
+            .about-text h3 {
+                font-size: 22px;
+            }
+
+            .about-text p {
+                font-size: 14px;
+                line-height: 2;
+            }
+
+
+            /* کارت ها */
 
             .cards,
             .teachers,
             .news,
             .gallery {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            .about-image img {
-                height: 300px;
+            .card {
+                padding: 25px 20px;
             }
+
+
+            /* معلم */
+
+            .teacher img {
+                height: 250px;
+            }
+
+
+            /* اخبار */
+
+            .news-card img {
+                height: 200px;
+            }
+
+
+            /* گالری */
+
+            .gallery img {
+                height: 220px;
+            }
+
+
+            /* تماس */
+
+            .contact {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .contact-box {
+                padding: 16px;
+                align-items: flex-start;
+            }
+
+            .contact-box p {
+                font-size: 12px;
+                word-break: break-word;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+
+            /* فوتر */
+
+            footer {
+                padding: 25px 15px;
+            }
+
+            footer p {
+                font-size: 12px;
+                line-height: 2;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
+
     <!-- =========================
-         هدر سایت
+         هدر
     ========================= -->
 
     <header>
@@ -628,37 +816,52 @@
 
             <a href="#home" class="logo">
 
-                
-                <img src="images\logo.jpg" alt="لوگوی دبستان سبحان">
-            
+                <img src="images/logo.jpg"
+                     alt="لوگوی دبستان سبحان">
 
-                <div class="logo-circle">س</div>
-
-                <span>دبستان پسرانه سبحان</span>
+                <span>
+                    دبستان پسرانه سبحان
+                </span>
 
             </a>
+
 
             <nav>
 
                 <ul>
 
-                    <li><a href="#home">خانه</a></li>
+                    <li>
+                        <a href="#home">خانه</a>
+                    </li>
 
-                    <li><a href="#about">درباره مدرسه</a></li>
+                    <li>
+                        <a href="#about">درباره مدرسه</a>
+                    </li>
 
-                    <li><a href="#facilities">امکانات</a></li>
+                    <li>
+                        <a href="#facilities">امکانات</a>
+                    </li>
 
-                    <li><a href="#teachers">کادر آموزشی</a></li>
+                    <li>
+                        <a href="#teachers">کادر آموزشی</a>
+                    </li>
 
-                    <li><a href="#news">اخبار</a></li>
+                    <li>
+                        <a href="#news">اخبار</a>
+                    </li>
 
-                    <li><a href="#gallery">گالری</a></li>
+                    <li>
+                        <a href="#gallery">گالری</a>
+                    </li>
 
-                    <li><a href="#contact">تماس با ما</a></li>
+                    <li>
+                        <a href="#contact">تماس با ما</a>
+                    </li>
 
                 </ul>
 
             </nav>
+
 
             <a href="#contact" class="header-button">
                 ارتباط با مدرسه
@@ -679,7 +882,9 @@
 
             <div class="hero-content">
 
-                <span>به وب‌سایت رسمی مدرسه خوش آمدید</span>
+                <span>
+                    به وب‌سایت رسمی مدرسه خوش آمدید
+                </span>
 
                 <h1>
                     دبستان غیردولتی پسرانه سبحان
@@ -719,7 +924,9 @@
 
             <div class="section-title">
 
-                <span>درباره ما</span>
+                <span>
+                    درباره ما
+                </span>
 
                 <h2>
                     آشنایی با دبستان سبحان
@@ -735,11 +942,6 @@
             <div class="about">
 
                 <div class="about-image">
-
-                    <!--
-                    عکس مدرسه را در این قسمت قرار بده.
-                    نام عکس باید school2.jpg باشد.
-                    -->
 
                     <img src="images/school2.jpg"
                          alt="دبستان غیردولتی پسرانه سبحان">
@@ -767,13 +969,21 @@
 
                     <ul class="check-list">
 
-                        <li>محیط آموزشی امن و پویا</li>
+                        <li>
+                            محیط آموزشی امن و پویا
+                        </li>
 
-                        <li>توجه به استعدادهای دانش‌آموزان</li>
+                        <li>
+                            توجه به استعدادهای دانش‌آموزان
+                        </li>
 
-                        <li>استفاده از روش‌های آموزشی نوین</li>
+                        <li>
+                            استفاده از روش‌های آموزشی نوین
+                        </li>
 
-                        <li>توجه به رشد اخلاقی و اجتماعی</li>
+                        <li>
+                            توجه به رشد اخلاقی و اجتماعی
+                        </li>
 
                     </ul>
 
@@ -796,7 +1006,9 @@
 
             <div class="section-title">
 
-                <span>امکانات مدرسه</span>
+                <span>
+                    امکانات مدرسه
+                </span>
 
                 <h2>
                     امکانات و خدمات آموزشی
@@ -811,9 +1023,12 @@
 
             <div class="cards">
 
+
                 <div class="card">
 
-                    <div class="icon">📚</div>
+                    <div class="icon">
+                        📚
+                    </div>
 
                     <h3>
                         کتابخانه کلاسی
@@ -829,7 +1044,9 @@
 
                 <div class="card">
 
-                    <div class="icon">💻</div>
+                    <div class="icon">
+                        💻
+                    </div>
 
                     <h3>
                         اردوی آزمایشگاه و کارگاه کامپیوتر
@@ -845,7 +1062,9 @@
 
                 <div class="card">
 
-                    <div class="icon">⚽</div>
+                    <div class="icon">
+                        ⚽
+                    </div>
 
                     <h3>
                         استفاده از سالن ورزش
@@ -860,7 +1079,9 @@
 
                 <div class="card">
 
-                    <div class="icon">🔬</div>
+                    <div class="icon">
+                        🔬
+                    </div>
 
                     <h3>
                         آزمایشگاه علوم
@@ -875,7 +1096,9 @@
 
                 <div class="card">
 
-                    <div class="icon">🎨</div>
+                    <div class="icon">
+                        🎨
+                    </div>
 
                     <h3>
                         کلاس‌های هنری
@@ -890,7 +1113,9 @@
 
                 <div class="card">
 
-                    <div class="icon">🧑‍🏫</div>
+                    <div class="icon">
+                        🧑‍🏫
+                    </div>
 
                     <h3>
                         کادر آموزشی
@@ -901,6 +1126,7 @@
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -919,7 +1145,9 @@
 
             <div class="section-title">
 
-                <span>کادر مدرسه</span>
+                <span>
+                    کادر مدرسه
+                </span>
 
                 <h2>
                     کادر دبستان
@@ -934,16 +1162,16 @@
 
             <div class="teachers">
 
+
                 <div class="teacher">
 
-                    <!-- عکس مدیر -->
-                    <img src="images\teacher.jpg"
+                    <img src="images/teacher.jpg"
                          alt="مدیر مدرسه">
 
                     <div class="teacher-info">
 
                         <h3>
-                        سرکار خانم کریمی
+                            سرکار خانم کریمی
                         </h3>
 
                         <p>
@@ -957,21 +1185,25 @@
 
                 <div class="teacher">
 
-                    <!-- عکس معلم -->
                     <img src="images/teacher2.jpg"
                          alt="موسس دبستان">
 
                     <div class="teacher-info">
 
                         <h3>
-                           جناب آقای دکتر عطااللهی 
+                            جناب آقای دکتر عطااللهی
                         </h3>
 
                         <p>
-                           موسس دبستان
+                            موسس دبستان
                         </p>
 
                     </div>
+
+                </div>
+
+
+            </div>
 
         </div>
 
@@ -988,7 +1220,9 @@
 
             <div class="section-title">
 
-                <span>آخرین اخبار</span>
+                <span>
+                    آخرین اخبار
+                </span>
 
                 <h2>
                     اخبار و اطلاعیه‌های مدرسه
@@ -1012,7 +1246,7 @@
                     <div class="news-content">
 
                         <div class="date">
-مهر1405
+                            مهر ۱۴۰۵
                         </div>
 
                         <h3>
@@ -1020,8 +1254,7 @@
                         </h3>
 
                         <p>
-                    اطلاعیه مربوط به آغاز سال تحصیلی و جشن شکوفه ها
-                    
+                            اطلاعیه مربوط به آغاز سال تحصیلی و جشن شکوفه‌ها
                         </p>
 
                     </div>
@@ -1037,7 +1270,7 @@
                     <div class="news-content">
 
                         <div class="date">
-شهریور1405
+                            شهریور ۱۴۰۵
                         </div>
 
                         <h3>
@@ -1045,8 +1278,8 @@
                         </h3>
 
                         <p>
-                        برنامه کلاس‌ تقویتی و فعالیت‌های آموزشی در شهریورماه به صورت رایگان
-            
+                            برنامه کلاس تقویتی و فعالیت‌های آموزشی
+                            در شهریورماه به صورت رایگان
                         </p>
 
                     </div>
@@ -1062,7 +1295,7 @@
                     <div class="news-content">
 
                         <div class="date">
-درطول سال تحصیلی
+                            در طول سال تحصیلی
                         </div>
 
                         <h3>
@@ -1070,7 +1303,8 @@
                         </h3>
 
                         <p>
-                            برگزاری مراسمات مختلف در طول سال و اردوهای علمی، آموزشی و تفریحی
+                            برگزاری مراسمات مختلف در طول سال و اردوهای
+                            علمی، آموزشی و تفریحی
                         </p>
 
                     </div>
@@ -1086,7 +1320,7 @@
 
 
     <!-- =========================
-         گالری تصاویر
+         گالری
     ========================= -->
 
     <section class="section" id="gallery">
@@ -1095,7 +1329,9 @@
 
             <div class="section-title">
 
-                <span>گالری تصاویر</span>
+                <span>
+                    گالری تصاویر
+                </span>
 
                 <h2>
                     تصاویر دبستان سبحان
@@ -1110,28 +1346,22 @@
 
             <div class="gallery">
 
-                <!-- تصویر شماره ۱ -->
-                <img src="images\school3.jpg"
+                <img src="images/school3.jpg"
                      alt="نمای مدرسه">
 
-                <!-- تصویر شماره ۲ -->
-                <img src="images\school4.jpg"
+                <img src="images/school4.jpg"
                      alt="محوطه مدرسه">
 
-                <!-- تصویر شماره ۳ -->
-                <img src="images\class3.jpg"
+                <img src="images/class3.jpg"
                      alt="کلاس درس">
 
-                <!-- تصویر شماره ۴ -->
-                <img src="images\students3.jpg"
+                <img src="images/students3.jpg"
                      alt="دانش آموزان">
 
-                <!-- تصویر شماره ۵ -->
                 <img src="images/class5.jpg"
                      alt="معلم مدرسه">
 
-                <!-- تصویر شماره ۶ -->
-                <img src="images\gallery3.jpg"
+                <img src="images/gallery3.jpg"
                      alt="فعالیت دانش آموزان">
 
             </div>
@@ -1142,7 +1372,7 @@
 
 
     <!-- =========================
-         تماس با ما
+         تماس
     ========================= -->
 
     <section class="section contact-section" id="contact">
@@ -1151,7 +1381,9 @@
 
             <div class="section-title">
 
-                <span>ارتباط با ما</span>
+                <span>
+                    ارتباط با ما
+                </span>
 
                 <h2>
                     با دبستان سبحان در ارتباط باشید
@@ -1183,7 +1415,7 @@
                             </h4>
 
                             <p>
-فسا کوچه4شاهزاده قاسم 
+                                فسا، کوچه ۴ شاهزاده قاسم
                             </p>
 
                         </div>
@@ -1204,7 +1436,7 @@
                             </h4>
 
                             <p>
-                                07153355595-09173325142
+                                07153355595 - 09173325142
                             </p>
 
                         </div>
@@ -1246,7 +1478,7 @@
                             </h4>
 
                             <p>
-                                شنبه تا چهارشنبه، 8 صبح تا 12
+                                شنبه تا چهارشنبه، ۸ صبح تا ۱۲
                             </p>
 
                         </div>
@@ -1320,3 +1552,4 @@
 </body>
 
 </html>
+```
