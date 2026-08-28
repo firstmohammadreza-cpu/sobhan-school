@@ -1,1622 +1,1522 @@
-
 <!DOCTYPE html>
+
 <html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>دبستان پسرانه سبحان</title>
+```
+<title>دبستان پسرانه سبحان</title>
 
-    <!-- فونت فارسی -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- فونت فارسی -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <style>
+<style>
 
-        /* =========================
-           تنظیمات کلی
-        ========================= */
+    /* =========================
+       تنظیمات کلی
+    ========================= */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
 
-        html {
-            width: 100%;
-            overflow-x: hidden;
-        }
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
 
-        body {
-            font-family: "Vazirmatn", sans-serif;
-            background-color: #f5f7fb;
-            color: #222;
-            line-height: 1.8;
-            width: 100%;
-            overflow-x: hidden;
-        }
+    body {
+        font-family: "Vazirmatn", sans-serif;
+        background-color: #f5f7fb;
+        color: #222;
+        line-height: 1.8;
+        width: 100%;
+        overflow-x: hidden;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+    img {
+        max-width: 100%;
+        display: block;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
 
 
-        /* =========================
-           هدر
-        ========================= */
+    /* =========================
+       هدر
+    ========================= */
 
-        header {
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-        }
+    header {
+        background: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar {
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 19px;
+        font-weight: 800;
+        color: #164e8a;
+        white-space: nowrap;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 22px;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+    nav a:hover {
+        color: #164e8a;
+    }
+
+    .header-button {
+        background: #164e8a;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-size: 14px;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+    .header-button:hover {
+        background: #0e3965;
+        transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       صفحه اصلی
+    ========================= */
+
+    .hero {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+
+        background:
+            linear-gradient(
+                rgba(10, 48, 85, 0.72),
+                rgba(10, 48, 85, 0.72)
+            ),
+            url("images/school.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        color: white;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        padding: 70px 0;
+    }
+
+    .hero-content span {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 7px 16px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        font-weight: 900;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #f0f5fa;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 13px 25px;
+        border-radius: 10px;
+        font-weight: 600;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    .btn-primary {
+        background: white;
+        color: #164e8a;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+    }
+
+    .btn-outline {
+        border: 1px solid white;
+        color: white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: #164e8a;
+    }
+
+
+    /* =========================
+       عنوان بخش ها
+    ========================= */
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-title span {
+        color: #f39c12;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+        color: #163a5f;
+        margin: 8px 0;
+    }
+
+    .section-title p {
+        color: #777;
+        max-width: 650px;
+        margin: auto;
+    }
+
+
+    /* =========================
+       معرفی مدرسه
+    ========================= */
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .about-text h3 {
+        font-size: 28px;
+        color: #163a5f;
+        margin-bottom: 15px;
+    }
+
+    .about-text p {
+        color: #666;
+        margin-bottom: 18px;
+    }
+
+    .check-list {
+        list-style: none;
+    }
+
+    .check-list li {
+        margin: 10px 0;
+        font-weight: 500;
+    }
+
+    .check-list li::before {
+        content: "✓";
+        color: #f39c12;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+
+    /* =========================
+       کارت امکانات
+    ========================= */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        margin: auto auto 20px;
+        background: #edf5ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .card h3 {
+        color: #163a5f;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        color: #777;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       کادر آموزشی
+    ========================= */
+
+    .teachers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .teacher {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .teacher img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+
+    .teacher-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .teacher-info h3 {
+        color: #163a5f;
+        margin-bottom: 5px;
+    }
+
+    .teacher-info p {
+        color: #888;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       اخبار
+    ========================= */
+
+    .news {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .news-card {
+        background: white;
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .news-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .news-content {
+        padding: 22px;
+    }
+
+    .date {
+        color: #f39c12;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .news-content h3 {
+        color: #163a5f;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .news-content p {
+        color: #777;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       گالری
+    ========================= */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 14px;
+        transition: 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.03);
+    }
+
+
+    /* =========================
+       تماس
+    ========================= */
+
+    .contact-section {
+        background: #163a5f;
+        color: white;
+    }
+
+    .contact-section .section-title h2 {
+        color: white;
+    }
+
+    .contact-section .section-title p {
+        color: #d7e2ed;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .contact-icon {
+        font-size: 25px;
+        flex-shrink: 0;
+    }
+
+    .contact-box h4 {
+        margin-bottom: 4px;
+    }
+
+    .contact-box p {
+        color: #d7e2ed;
+        font-size: 14px;
+    }
+
+    .contact-box a {
+        color: #d7e2ed;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .contact-box a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .contact-form {
+        background: white;
+        padding: 30px;
+        border-radius: 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 13px;
+        font-family: inherit;
+        margin-bottom: 15px;
+        outline: none;
+    }
+
+    .contact-form textarea {
+        height: 130px;
+        resize: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #164e8a;
+    }
+
+    .submit-btn {
+        border: none;
+        background: #164e8a;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 600;
+    }
+
+
+    /* =========================
+       فوتر
+    ========================= */
+
+    footer {
+        background: #0c263f;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    footer p {
+        color: #c8d3de;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       تبلت
+    ========================= */
+
+    @media (max-width: 1000px) {
 
         .navbar {
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 19px;
-            font-weight: 800;
-            color: #164e8a;
-            white-space: nowrap;
-        }
-
-        .logo img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            border-radius: 50%;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 22px;
-            align-items: center;
-        }
-
-        nav a {
-            font-size: 14px;
-            font-weight: 500;
-            color: #333;
-            transition: 0.3s;
-            white-space: nowrap;
-        }
-
-        nav a:hover {
-            color: #164e8a;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px 0;
         }
 
         .header-button {
-            background: #164e8a;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 10px;
-            font-size: 14px;
-            transition: 0.3s;
-            white-space: nowrap;
+            display: none;
         }
 
-        .header-button:hover {
-            background: #0e3965;
-            transform: translateY(-2px);
+        nav ul {
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-
-        /* =========================
-           صفحه اصلی
-        ========================= */
-
-        .hero {
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-
-            background:
-                linear-gradient(
-                    rgba(10, 48, 85, 0.72),
-                    rgba(10, 48, 85, 0.72)
-                ),
-                url("images/school.jpg");
-
-            background-size: cover;
-            background-position: center;
-
-            color: white;
+        .about,
+        .contact {
+            grid-template-columns: 1fr;
         }
 
-        .hero-content {
-            max-width: 700px;
-            padding: 70px 0;
-        }
-
-        .hero-content span {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 7px 16px;
-            border-radius: 30px;
-            margin-bottom: 20px;
-            font-size: 14px;
+        .cards,
+        .teachers,
+        .news {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .hero h1 {
-            font-size: 48px;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            font-weight: 900;
+            font-size: 40px;
+        }
+    }
+
+
+    /* =========================
+       موبایل
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        .container {
+            width: 90%;
+        }
+
+
+        /* هدر */
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 0;
+            gap: 12px;
+        }
+
+        .logo {
+            justify-content: center;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 7px 12px;
+        }
+
+        nav a {
+            font-size: 12px;
+        }
+
+
+        /* هیرو */
+
+        .hero {
+            min-height: 500px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero-content span {
+            font-size: 11px;
+            padding: 6px 10px;
+        }
+
+        .hero h1 {
+            font-size: 27px;
+            line-height: 1.7;
         }
 
         .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #f0f5fa;
+            font-size: 14px;
+            line-height: 2;
         }
 
         .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
         .btn {
-            padding: 13px 25px;
-            border-radius: 10px;
-            font-weight: 600;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #164e8a;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            border: 1px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #164e8a;
+            padding: 10px 16px;
+            font-size: 13px;
         }
 
 
-        /* =========================
-           عنوان بخش ها
-        ========================= */
+        /* بخش ها */
 
         .section {
-            padding: 90px 0;
+            padding: 55px 0;
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .section-title span {
-            color: #f39c12;
-            font-weight: 700;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .section-title h2 {
-            font-size: 32px;
-            color: #163a5f;
-            margin: 8px 0;
+            font-size: 23px;
+            line-height: 1.7;
         }
 
         .section-title p {
-            color: #777;
-            max-width: 650px;
-            margin: auto;
+            font-size: 13px;
+            line-height: 2;
         }
 
 
-        /* =========================
-           معرفی مدرسه
-        ========================= */
+        /* درباره */
 
         .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .about-image img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            height: 260px;
         }
 
         .about-text h3 {
-            font-size: 28px;
-            color: #163a5f;
-            margin-bottom: 15px;
+            font-size: 22px;
         }
 
         .about-text p {
-            color: #666;
-            margin-bottom: 18px;
-        }
-
-        .check-list {
-            list-style: none;
-        }
-
-        .check-list li {
-            margin: 10px 0;
-            font-weight: 500;
-        }
-
-        .check-list li::before {
-            content: "✓";
-            color: #f39c12;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-
-
-        /* =========================
-           کارت امکانات
-        ========================= */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            text-align: center;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        .icon {
-            width: 70px;
-            height: 70px;
-            margin: auto auto 20px;
-            background: #edf5ff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-        }
-
-        .card h3 {
-            color: #163a5f;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #777;
             font-size: 14px;
+            line-height: 2;
         }
 
 
-        /* =========================
-           کادر آموزشی
-        ========================= */
+        /* کارت ها */
 
-        .teachers {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .teacher {
-            background: white;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-        }
-
-        .teacher img {
-            width: 100%;
-            height: 270px;
-            object-fit: cover;
-        }
-
-        .teacher-info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .teacher-info h3 {
-            color: #163a5f;
-            margin-bottom: 5px;
-        }
-
-        .teacher-info p {
-            color: #888;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           اخبار
-        ========================= */
-
-        .news {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .news-card {
-            background: white;
-            overflow: hidden;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-        }
-
-        .news-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .news-content {
-            padding: 22px;
-        }
-
-        .date {
-            color: #f39c12;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
-        .news-content h3 {
-            color: #163a5f;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .news-content p {
-            color: #777;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           گالری
-        ========================= */
-
+        .cards,
+        .teachers,
+        .news,
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            border-radius: 14px;
-            transition: 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.03);
-        }
-
-
-        /* =========================
-           تماس
-        ========================= */
-
-        .contact-section {
-            background: #163a5f;
-            color: white;
-        }
-
-        .contact-section .section-title h2 {
-            color: white;
-        }
-
-        .contact-section .section-title p {
-            color: #d7e2ed;
-        }
-
-        .contact {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: 1fr;
             gap: 20px;
         }
 
-        .contact-box {
+        .card {
+            padding: 25px 20px;
+        }
+
+
+        /* معلم */
+
+        .teacher img {
+            height: 250px;
+        }
+
+
+        /* اخبار */
+
+        .news-card img {
+            height: 200px;
+        }
+
+
+        /* گالری */
+
+        .gallery img {
+            height: 220px;
+        }
+
+
+        /* تماس */
+
+        .contact {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 20px;
-            border-radius: 12px;
+            flex-direction: column;
+            gap: 25px;
         }
 
-        .contact-icon {
-            font-size: 25px;
-            flex-shrink: 0;
-        }
-
-        .contact-box h4 {
-            margin-bottom: 4px;
+        .contact-box {
+            padding: 16px;
+            align-items: flex-start;
         }
 
         .contact-box p {
-            color: #d7e2ed;
-            font-size: 14px;
+            font-size: 12px;
+            word-break: break-word;
         }
 
         .contact-form {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 13px;
-            font-family: inherit;
-            margin-bottom: 15px;
-            outline: none;
-        }
-
-        .contact-form textarea {
-            height: 130px;
-            resize: none;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #164e8a;
-        }
-
-        .submit-btn {
-            border: none;
-            background: #164e8a;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: 600;
+            padding: 20px;
         }
 
 
-        /* =========================
-           فوتر
-        ========================= */
+        /* فوتر */
 
         footer {
-            background: #0c263f;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
+            padding: 25px 15px;
         }
 
         footer p {
-            color: #c8d3de;
-            font-size: 14px;
+            font-size: 12px;
+            line-height: 2;
         }
 
+    }
 
-        /* =========================
-           تبلت
-        ========================= */
+</style>
+```
 
-        @media (max-width: 1000px) {
-
-            .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 15px 0;
-            }
-
-            .header-button {
-                display: none;
-            }
-
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .about,
-            .contact {
-                grid-template-columns: 1fr;
-            }
-
-            .cards,
-            .teachers,
-            .news {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-        }
-
-
-        /* =========================
-           موبایل
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            .container {
-                width: 90%;
-            }
-
-
-            /* هدر */
-
-            .navbar {
-                display: flex;
-                flex-direction: column;
-                padding: 12px 0;
-                gap: 12px;
-            }
-
-            .logo {
-                justify-content: center;
-                width: 100%;
-                font-size: 16px;
-            }
-
-            .logo img {
-                width: 42px;
-                height: 42px;
-            }
-
-            nav {
-                width: 100%;
-            }
-
-            nav ul {
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 7px 12px;
-            }
-
-            nav a {
-                font-size: 12px;
-            }
-
-
-            /* هیرو */
-
-            .hero {
-    min-height: 500px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #163a5f;
-}
-}
-            .hero-content {
-                text-align: center;
-                padding: 60px 0;
-            }
-
-            .hero-content span {
-                font-size: 11px;
-                padding: 6px 10px;
-            }
-
-            .hero h1 {
-                font-size: 27px;
-                line-height: 1.7;
-            }
-
-            .hero p {
-                font-size: 14px;
-                line-height: 2;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-                gap: 10px;
-            }
-
-            .btn {
-                padding: 10px 16px;
-                font-size: 13px;
-            }
-
-
-            /* بخش ها */
-
-            .section {
-                padding: 55px 0;
-            }
-
-            .section-title {
-                margin-bottom: 30px;
-            }
-
-            .section-title span {
-                font-size: 12px;
-            }
-
-            .section-title h2 {
-                font-size: 23px;
-                line-height: 1.7;
-            }
-
-            .section-title p {
-                font-size: 13px;
-                line-height: 2;
-            }
-
-
-            /* درباره */
-
-            .about {
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .about-image img {
-                height: 260px;
-            }
-
-            .about-text h3 {
-                font-size: 22px;
-            }
-
-            .about-text p {
-                font-size: 14px;
-                line-height: 2;
-            }
-
-
-            /* کارت ها */
-
-            .cards,
-            .teachers,
-            .news,
-            .gallery {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .card {
-                padding: 25px 20px;
-            }
-
-
-            /* معلم */
-
-            .teacher img {
-                height: 250px;
-            }
-
-
-            /* اخبار */
-
-            .news-card img {
-                height: 200px;
-            }
-
-
-            /* گالری */
-
-            .gallery img {
-                height: 220px;
-            }
-
-
-            /* تماس */
-
-            .contact {
-                display: flex;
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .contact-box {
-                padding: 16px;
-                align-items: flex-start;
-            }
-
-            .contact-box p {
-                font-size: 12px;
-                word-break: break-word;
-            }
-
-            .contact-form {
-                padding: 20px;
-            }
-
-
-            /* فوتر */
-
-            footer {
-                padding: 25px 15px;
-            }
-
-            footer p {
-                font-size: 12px;
-                line-height: 2;
-            }
-
-        }
-        .contact-box a {
-    color: #d7e2ed;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.contact-box a:hover {
-    color: white;
-    text-decoration: underline;
-}
-    </style>
 </head>
-
 
 <body>
 
+```
+<header>
 
-    <!-- =========================
-         هدر
-    ========================= -->
+    <div class="container navbar">
 
-    <header>
+        <a href="#home" class="logo">
 
-        <div class="container navbar">
+            <img src="images/logo.jpg"
+                 alt="لوگوی دبستان سبحان">
 
-            <a href="#home" class="logo">
+            <span>
+                دبستان پسرانه سبحان
+            </span>
 
-                <img src="images/logo.jpg"
-                     alt="لوگوی دبستان سبحان">
+        </a>
 
-                <span>
-                    دبستان پسرانه سبحان
-                </span>
+        <nav>
 
-            </a>
+            <ul>
+
+                <li><a href="#home">خانه</a></li>
+
+                <li><a href="#about">درباره مدرسه</a></li>
+
+                <li><a href="#facilities">امکانات</a></li>
+
+                <li><a href="#teachers">کادر آموزشی</a></li>
+
+                <li><a href="#news">اخبار</a></li>
+
+                <li><a href="#gallery">گالری</a></li>
+
+                <li><a href="#contact">تماس با ما</a></li>
+
+            </ul>
+
+        </nav>
+
+        <a href="#contact" class="header-button">
+            ارتباط با مدرسه
+        </a>
+
+    </div>
+
+</header>
 
 
-            <nav>
+<section class="hero" id="home">
 
-                <ul>
+    <div class="container">
 
-                    <li>
-                        <a href="#home">خانه</a>
-                    </li>
+        <div class="hero-content">
 
-                    <li>
-                        <a href="#about">درباره مدرسه</a>
-                    </li>
+            <span>
+                به وب‌سایت رسمی مدرسه خوش آمدید
+            </span>
 
-                    <li>
-                        <a href="#facilities">امکانات</a>
-                    </li>
+            <h1>
+                دبستان غیردولتی پسرانه سبحان
+            </h1>
 
-                    <li>
-                        <a href="#teachers">کادر آموزشی</a>
-                    </li>
+            <p>
+                محیطی پویا، امن و آموزشی برای رشد علمی،
+                اخلاقی و اجتماعی دانش‌آموزان
+            </p>
 
-                    <li>
-                        <a href="#news">اخبار</a>
-                    </li>
+            <div class="hero-buttons">
 
-                    <li>
-                        <a href="#gallery">گالری</a>
-                    </li>
+                <a href="#about" class="btn btn-primary">
+                    آشنایی با مدرسه
+                </a>
 
-                    <li>
-                        <a href="#contact">تماس با ما</a>
-                    </li>
+                <a href="#contact" class="btn btn-outline">
+                    تماس با ما
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>درباره ما</span>
+
+            <h2>
+                آشنایی با دبستان سبحان
+            </h2>
+
+            <p>
+                مدرسه‌ای برای ساختن آینده‌ای روشن برای فرزندان این سرزمین
+            </p>
+
+        </div>
+
+        <div class="about">
+
+            <div class="about-image">
+
+                <img src="images/school2.jpg"
+                     alt="دبستان غیردولتی پسرانه سبحان">
+
+            </div>
+
+            <div class="about-text">
+
+                <h3>
+                    آموزش همراه با پرورش
+                </h3>
+
+                <p>
+                    دبستان پسرانه سبحان با هدف فراهم کردن محیطی
+                    مناسب برای آموزش و رشد همه‌جانبه دانش‌آموزان
+                    فعالیت می‌کند.
+                </p>
+
+                <p>
+                    در این مجموعه تلاش می‌شود دانش‌آموزان در کنار
+                    یادگیری دروس، مهارت‌های اجتماعی، خلاقیت و
+                    مسئولیت‌پذیری را نیز فرا بگیرند.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>محیط آموزشی امن و پویا</li>
+
+                    <li>توجه به استعدادهای دانش‌آموزان</li>
+
+                    <li>استفاده از روش‌های آموزشی نوین</li>
+
+                    <li>توجه به رشد اخلاقی و اجتماعی</li>
 
                 </ul>
 
-            </nav>
-
-
-            <a href="#contact" class="header-button">
-                ارتباط با مدرسه
-            </a>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         صفحه اصلی
-    ========================= -->
-
-    <section class="hero" id="home">
-
-        <div class="container">
-
-            <div class="hero-content">
-
-                <span>
-                    به وب‌سایت رسمی مدرسه خوش آمدید
-                </span>
-
-                <h1>
-                    دبستان غیردولتی پسرانه سبحان
-                </h1>
-
-                <p>
-                    محیطی پویا، امن و آموزشی برای رشد علمی،
-                    اخلاقی و اجتماعی دانش‌آموزان
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#about" class="btn btn-primary">
-                        آشنایی با مدرسه
-                    </a>
-
-                    <a href="#contact" class="btn btn-outline">
-                        تماس با ما
-                    </a>
-
-                </div>
-
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         درباره مدرسه
-    ========================= -->
+<section class="section" id="facilities">
 
-    <section class="section" id="about">
+    <div class="container">
 
-        <div class="container">
+        <div class="section-title">
 
-            <div class="section-title">
+            <span>امکانات مدرسه</span>
 
-                <span>
-                    درباره ما
-                </span>
+            <h2>
+                امکانات و خدمات آموزشی
+            </h2>
 
-                <h2>
-                    آشنایی با دبستان سبحان
-                </h2>
+            <p>
+                بخشی از امکاناتی که برای دانش‌آموزان فراهم شده است
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">📚</div>
+
+                <h3>
+                    کتابخانه کلاسی
+                </h3>
 
                 <p>
-                    مدرسه‌ای برای ساختن آینده‌ای روشن برای فرزندان این سرزمین
+                    فضای مناسب برای مطالعه و افزایش علاقه دانش‌آموزان
+                    به کتاب و مطالعه.
                 </p>
 
             </div>
 
+            <div class="card">
 
-            <div class="about">
+                <div class="icon">💻</div>
 
-                <div class="about-image">
+                <h3>
+                    اردوی آزمایشگاه و کارگاه کامپیوتر
+                </h3>
 
-                    <img src="images/school2.jpg"
-                         alt="دبستان غیردولتی پسرانه سبحان">
+                <p>
+                    آموزش مهارت‌های کامپیوتری و آشنایی دانش‌آموزان
+                    با فناوری.
+                </p>
 
-                </div>
+            </div>
 
+            <div class="card">
 
-                <div class="about-text">
+                <div class="icon">⚽</div>
 
-                    <h3>
-                        آموزش همراه با پرورش
-                    </h3>
+                <h3>
+                    استفاده از سالن ورزش
+                </h3>
 
-                    <p>
-                        دبستان پسرانه سبحان با هدف فراهم کردن محیطی
-                        مناسب برای آموزش و رشد همه‌جانبه دانش‌آموزان
-                        فعالیت می‌کند.
-                    </p>
+                <p>
+                    توجه به سلامت جسمی و فعالیت‌های ورزشی دانش‌آموزان.
+                </p>
 
-                    <p>
-                        در این مجموعه تلاش می‌شود دانش‌آموزان در کنار
-                        یادگیری دروس، مهارت‌های اجتماعی، خلاقیت و
-                        مسئولیت‌پذیری را نیز فرا بگیرند.
-                    </p>
+            </div>
 
-                    <ul class="check-list">
+            <div class="card">
 
-                        <li>
-                            محیط آموزشی امن و پویا
-                        </li>
+                <div class="icon">🔬</div>
 
-                        <li>
-                            توجه به استعدادهای دانش‌آموزان
-                        </li>
+                <h3>
+                    آزمایشگاه علوم
+                </h3>
 
-                        <li>
-                            استفاده از روش‌های آموزشی نوین
-                        </li>
+                <p>
+                    آموزش مفاهیم علمی به صورت عملی و جذاب.
+                </p>
 
-                        <li>
-                            توجه به رشد اخلاقی و اجتماعی
-                        </li>
+            </div>
 
-                    </ul>
+            <div class="card">
 
-                </div>
+                <div class="icon">🎨</div>
+
+                <h3>
+                    کلاس‌های هنری
+                </h3>
+
+                <p>
+                    پرورش خلاقیت و استعدادهای هنری دانش‌آموزان.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icon">🧑‍🏫</div>
+
+                <h3>
+                    کادر آموزشی
+                </h3>
+
+                <p>
+                    استفاده از معلمان و مربیان مجرب و دلسوز.
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         امکانات
-    ========================= -->
+<section class="section" id="teachers">
 
-    <section class="section" id="facilities">
+    <div class="container">
 
-        <div class="container">
+        <div class="section-title">
 
-            <div class="section-title">
+            <span>کادر مدرسه</span>
 
-                <span>
-                    امکانات مدرسه
-                </span>
+            <h2>
+                کادر دبستان
+            </h2>
 
-                <h2>
-                    امکانات و خدمات آموزشی
-                </h2>
-
-                <p>
-                    بخشی از امکاناتی که برای دانش‌آموزان فراهم شده است
-                </p>
-
-            </div>
-
-
-            <div class="cards">
-
-
-                <div class="card">
-
-                    <div class="icon">
-                        📚
-                    </div>
-
-                    <h3>
-                        کتابخانه کلاسی
-                    </h3>
-
-                    <p>
-                        فضای مناسب برای مطالعه و افزایش علاقه دانش‌آموزان
-                        به کتاب و مطالعه.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="icon">
-                        💻
-                    </div>
-
-                    <h3>
-                        اردوی آزمایشگاه و کارگاه کامپیوتر
-                    </h3>
-
-                    <p>
-                        آموزش مهارت‌های کامپیوتری و آشنایی دانش‌آموزان
-                        با فناوری.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="icon">
-                        ⚽
-                    </div>
-
-                    <h3>
-                        استفاده از سالن ورزش
-                    </h3>
-
-                    <p>
-                        توجه به سلامت جسمی و فعالیت‌های ورزشی دانش‌آموزان.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="icon">
-                        🔬
-                    </div>
-
-                    <h3>
-                        آزمایشگاه علوم
-                    </h3>
-
-                    <p>
-                        آموزش مفاهیم علمی به صورت عملی و جذاب.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="icon">
-                        🎨
-                    </div>
-
-                    <h3>
-                        کلاس‌های هنری
-                    </h3>
-
-                    <p>
-                        پرورش خلاقیت و استعدادهای هنری دانش‌آموزان.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="icon">
-                        🧑‍🏫
-                    </div>
-
-                    <h3>
-                        کادر آموزشی
-                    </h3>
-
-                    <p>
-                        استفاده از معلمان و مربیان مجرب و دلسوز.
-                    </p>
-
-                </div>
-
-
-            </div>
+            <p>
+                آشنایی با پرسنل مدرسه
+            </p>
 
         </div>
 
-    </section>
+        <div class="teachers">
 
+            <div class="teacher">
 
-    <!-- =========================
-         کادر آموزشی
-    ========================= -->
+                <img src="images/teacher.jpg"
+                     alt="مدیر مدرسه">
 
-    <section class="section" id="teachers">
+                <div class="teacher-info">
 
-        <div class="container">
+                    <h3>
+                        سرکار خانم کریمی
+                    </h3>
 
-            <div class="section-title">
+                    <p>
+                        مدیر دبستان سبحان
+                    </p>
 
-                <span>
-                    کادر مدرسه
-                </span>
-
-                <h2>
-                    کادر دبستان
-                </h2>
-
-                <p>
-                    آشنایی با پرسنل مدرسه
-                </p>
-
-            </div>
-
-
-            <div class="teachers">
-
-
-                <div class="teacher">
-
-                    <img src="images/teacher.jpg"
-                         alt="مدیر مدرسه">
-
-                    <div class="teacher-info">
-
-                        <h3>
-                            سرکار خانم کریمی
-                        </h3>
-
-                        <p>
-                            مدیر دبستان سبحان
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="teacher">
-
-                    <img src="images/teacher2.jpg"
-                         alt="موسس دبستان">
-
-                    <div class="teacher-info">
-
-                        <h3>
-                            جناب آقای دکتر عطااللهی
-                        </h3>
-
-                        <p>
-                            موسس دبستان
-                        </p>
-
-                    </div>
-
-                </div>
-                <div class="teacher">
-
-                    <img src="images/teacher7.jpg"
-                         alt="معلم مدرسه">
-                
-                    <div class="teacher-info">
-                
-                        <h3>
-                            آموزگاران دبستان
-                        </h3>
-                
-                        <p>
-                            معلم دبستان سبحان
-                        </p>
-                
-                    </div>
-                
                 </div>
 
             </div>
 
-        </div>
+            <div class="teacher">
 
-    </section>
+                <img src="images/teacher2.jpg"
+                     alt="موسس دبستان">
 
+                <div class="teacher-info">
 
-    <!-- =========================
-         اخبار
-    ========================= -->
+                    <h3>
+                        جناب آقای دکتر عطااللهی
+                    </h3>
 
-    <section class="section" id="news">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>
-                    آخرین اخبار
-                </span>
-
-                <h2>
-                    اخبار و اطلاعیه‌های مدرسه
-                </h2>
-
-                <p>
-                    آخرین اطلاعیه‌ها و رویدادهای دبستان سبحان
-                </p>
-
-            </div>
-
-
-            <div class="news">
-
-
-                <div class="news-card">
-
-                    <img src="images/students.jpg"
-                         alt="دانش آموزان">
-
-                    <div class="news-content">
-
-                        <div class="date">
-                            مهر ۱۴۰۵
-                        </div>
-
-                        <h3>
-                            آغاز سال تحصیلی
-                        </h3>
-
-                        <p>
-                            برگزاری جشن شکوفه ها در اول مهرماه
-                        </p>
-
-                    </div>
+                    <p>
+                        موسس دبستان
+                    </p>
 
                 </div>
 
-
-                <div class="news-card">
-
-                    <img src="images/class.jpg"
-                         alt="کلاس درس">
-
-                    <div class="news-content">
-
-                        <div class="date">
-                            شهریور ۱۴۰۵
-                        </div>
-
-                        <h3>
-                            برگزاری کلاس‌های آموزشی و تقویتی تابستانه
-                        </h3>
-
-                        <p>
-                            برنامه کلاس تقویتی و فعالیت‌های آموزشی
-                            در شهریورماه به صورت رایگان
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="news-card">
-
-                    <img src="images/school8.jpg"
-                         alt="مدرسه">
-
-                    <div class="news-content">
-
-                        <div class="date">
-                            در طول سال تحصیلی
-                        </div>
-
-                        <h3>
-                            برنامه‌های فرهنگی مدرسه
-                        </h3>
-
-                        <p>
-                            برگزاری مراسمات مختلف در طول سال و اردوهای
-                            علمی، آموزشی و تفریحی
-                        </p>
-
-                    </div>
-
-                </div>
-
-
             </div>
 
-        </div>
+            <div class="teacher">
 
-    </section>
-
-
-    <!-- =========================
-         گالری
-    ========================= -->
-
-    <section class="section" id="gallery">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>
-                    گالری تصاویر
-                </span>
-
-                <h2>
-                    تصاویر دبستان سبحان
-                </h2>
-
-                <p>
-                    بخشی از تصاویر محیط مدرسه و فعالیت‌های دانش‌آموزان
-                </p>
-
-            </div>
-
-
-            <div class="gallery">
-
-                <img src="images/school3.jpg"
-                     alt="نمای مدرسه">
-
-                <img src="images/school4.jpg"
-                     alt="محوطه مدرسه">
-
-                <img src="images/class3.jpg"
-                     alt="کلاس درس">
-
-                <img src="images/students3.jpg"
-                     alt="دانش آموزان">
-
-                <img src="images/class5.jpg"
+                <img src="images/teacher7.jpg"
                      alt="معلم مدرسه">
 
-                <img src="images/gallery3.jpg"
-                     alt="فعالیت دانش آموزان">
+                <div class="teacher-info">
+
+                    <h3>
+                        آموزگاران دبستان
+                    </h3>
+
+                    <p>
+                        معلم دبستان سبحان
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         تماس
-    ========================= -->
+<section class="section" id="news">
 
-    <section class="section contact-section" id="contact">
+    <div class="container">
 
-        <div class="container">
+        <div class="section-title">
 
-            <div class="section-title">
+            <span>آخرین اخبار</span>
 
-                <span>
-                    ارتباط با ما
-                </span>
-
-                <h2>
-                    با دبستان سبحان در ارتباط باشید
-                </h2>
-
-                <p>
-                    برای دریافت اطلاعات بیشتر می‌توانید با مدرسه تماس بگیرید.
-                </p>
-
-            </div>
-
-
-            <div class="contact">
-
-
-                <div class="contact-info">
-
-
-                    <div class="contact-box">
-
-                        <div class="contact-icon">
-                            📍
-                        </div>
-
-                        <div>
-
-                            <h4>
-                                آدرس مدرسه
-                            </h4>
-
-                            <p>
-                                فسا، کوچه ۴ شاهزاده قاسم
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-box">
-
-                        <div class="contact-icon">
-                            📞
-                        </div>
-
-                        <div>
-
-                            <h4>
-                                تلفن تماس
-                            </h4>
-
-                            <p>
-                                <a href="tel:07153355595">07153355595</a>
-                                -
-                                <a href="tel:09164801131">09164801131</a>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-box">
-
-                        <div class="contact-icon">
-                            ✉️
-                        </div>
-
-                        <div>
-
-                            <h4>
-                                اینستاگرام
-                            </h4>
-
-                            <p>
-                                <a href="https://www.instagram.com/sobhanschool_fasa/"
-                                   target="_blank">
-                                    @sobhanschool_fasa
-                                </a>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-box">
-
-                        <div class="contact-icon">
-                            🕐
-                        </div>
-
-                        <div>
-
-                            <h4>
-                                ساعات کاری
-                            </h4>
-
-                            <p>
-                                شنبه تا چهارشنبه، ۸ صبح تا ۱۲
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="contact-form">
-
-                    <form id="contactForm">
-
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="نام و نام خانوادگی"
-                            required>
-                    
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="ایمیل"
-                            required>
-                    
-                        <input
-                            type="tel"
-                            id="phone"
-                            placeholder="شماره تماس"
-                            required>
-                    
-                        <textarea
-                            id="message"
-                            placeholder="پیام خود را بنویسید..."
-                            required></textarea>
-                    
-                        <button
-                            type="submit"
-                            class="submit-btn">
-                    
-                            ارسال پیام در واتساپ
-                    
-                        </button>
-                    
-                    </form>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         فوتر
-    ========================= -->
-
-    <footer>
-
-        <div class="container">
+            <h2>
+                اخبار و اطلاعیه‌های مدرسه
+            </h2>
 
             <p>
-                © ۱۴۰۵ دبستان پسرانه سبحان | تمامی حقوق محفوظ است.
-            </p>
-
-            <p>
-                 طراحی و توسعه وب‌سایت آموزشی دبستان سبحان توسط محمدرضا رحمانی
+                آخرین اطلاعیه‌ها و رویدادهای دبستان سبحان
             </p>
 
         </div>
 
-    </footer>
+        <div class="news">
 
-    <script>
+            <div class="news-card">
 
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-        
-            event.preventDefault();
-        
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const message = document.getElementById("message").value;
-        
-            const whatsappMessage =
-                "سلام، از طریق وب‌سایت دبستان سبحان پیام دارم.%0A%0A" +
-                "نام: " + name + "%0A" +
-                "ایمیل: " + email + "%0A" +
-                "شماره تماس: " + phone + "%0A" +
-                "پیام: " + message;
-        
-            const whatsappURL =
-                "https://wa.me/989164801131?text=" + whatsappMessage;
-        
-            window.open(whatsappURL, "_blank");
-        
-        });
-        
-        </script>
+                <img src="images/students.jpg"
+                     alt="دانش آموزان">
+
+                <div class="news-content">
+
+                    <div class="date">
+                        مهر ۱۴۰۵
+                    </div>
+
+                    <h3>
+                        آغاز سال تحصیلی
+                    </h3>
+
+                    <p>
+                        برگزاری جشن شکوفه ها در اول مهرماه
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="news-card">
+
+                <img src="images/class.jpg"
+                     alt="کلاس درس">
+
+                <div class="news-content">
+
+                    <div class="date">
+                        شهریور ۱۴۰۵
+                    </div>
+
+                    <h3>
+                        برگزاری کلاس‌های آموزشی و تقویتی تابستانه
+                    </h3>
+
+                    <p>
+                        برنامه کلاس تقویتی و فعالیت‌های آموزشی
+                        در شهریورماه به صورت رایگان
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="news-card">
+
+                <img src="images/school8.jpg"
+                     alt="مدرسه">
+
+                <div class="news-content">
+
+                    <div class="date">
+                        در طول سال تحصیلی
+                    </div>
+
+                    <h3>
+                        برنامه‌های فرهنگی مدرسه
+                    </h3>
+
+                    <p>
+                        برگزاری مراسمات مختلف در طول سال و اردوهای
+                        علمی، آموزشی و تفریحی
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>گالری تصاویر</span>
+
+            <h2>
+                تصاویر دبستان سبحان
+            </h2>
+
+            <p>
+                بخشی از تصاویر محیط مدرسه و فعالیت‌های دانش‌آموزان
+            </p>
+
+        </div>
+
+        <div class="gallery">
+
+            <img src="images/school3.jpg"
+                 alt="نمای مدرسه">
+
+            <img src="images/school4.jpg"
+                 alt="محوطه مدرسه">
+
+            <img src="images/class3.jpg"
+                 alt="کلاس درس">
+
+            <img src="images/students3.jpg"
+                 alt="دانش آموزان">
+
+            <img src="images/class5.jpg"
+                 alt="معلم مدرسه">
+
+            <img src="images/gallery3.jpg"
+                 alt="فعالیت دانش آموزان">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>ارتباط با ما</span>
+
+            <h2>
+                با دبستان سبحان در ارتباط باشید
+            </h2>
+
+            <p>
+                برای دریافت اطلاعات بیشتر می‌توانید با مدرسه تماس بگیرید.
+            </p>
+
+        </div>
+
+        <div class="contact">
+
+            <div class="contact-info">
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            آدرس مدرسه
+                        </h4>
+
+                        <p>
+                            فسا، کوچه ۴ شاهزاده قاسم
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            تلفن تماس
+                        </h4>
+
+                        <p>
+                            <a href="tel:07153355595">07153355595</a>
+                            -
+                            <a href="tel:09164801131">09164801131</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            اینستاگرام
+                        </h4>
+
+                        <p>
+                            <a href="https://www.instagram.com/sobhanschool_fasa/"
+                               target="_blank">
+                                @sobhanschool_fasa
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <div class="contact-icon">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            ساعات کاری
+                        </h4>
+
+                        <p>
+                            شنبه تا چهارشنبه، ۸ صبح تا ۱۲
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="نام و نام خانوادگی"
+                        required>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="ایمیل"
+                        required>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="شماره تماس"
+                        required>
+
+                    <textarea
+                        id="message"
+                        placeholder="پیام خود را بنویسید..."
+                        required></textarea>
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        ارسال پیام در واتساپ
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © ۱۴۰۵ دبستان پسرانه سبحان | تمامی حقوق محفوظ است.
+        </p>
+
+        <p>
+            طراحی و توسعه وب‌سایت آموزشی دبستان سبحان توسط محمدرضا رحمانی
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        const whatsappMessage =
+            "سلام، از طریق وب‌سایت دبستان سبحان پیام دارم.%0A%0A" +
+            "نام: " + name + "%0A" +
+            "ایمیل: " + email + "%0A" +
+            "شماره تماس: " + phone + "%0A" +
+            "پیام: " + message;
+
+        const whatsappURL =
+            "https://wa.me/989164801131?text=" + whatsappMessage;
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+</script>
+```
+
 </body>
 
 </html>
-```
